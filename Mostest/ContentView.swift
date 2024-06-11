@@ -53,20 +53,12 @@ struct ContentView: View {
     @State private var server = HTTPServer(port: 80)
     @State private var filesURLs = [URL]()
     
-    @discardableResult
-    private func serve(url: URL) async throws -> Task<Void, Never> {
+    private func serve(url: URL) async throws {
         await server.stop(timeout: 10)
         server = HTTPServer(port: 80)
-        return Task.detached(priority: .background) {
-            await server.appendRoute("GET /", to: IndexHandler(fileURLs: filesURLs))
-            await server.appendRoute("GET /*", to: DirectoryHTTPHandler(root: url))
-            do {
-                print("serving \(url.absoluteString)")
-                try await server.start()
-            } catch {
-                print("Error for \(url.absoluteString)\n\tReason:\n\(error.localizedDescription)\n-----")
-            }
-        }
+        await server.appendRoute("GET /", to: IndexHandler(fileURLs: filesURLs))
+        await server.appendRoute("GET /*", to: DirectoryHTTPHandler(root: url))
+        try await server.start()
     }
     
     private func getFolderContents(url: URL) throws -> [URL] {
@@ -76,31 +68,28 @@ struct ContentView: View {
                 alpha.absoluteString < bravo.absoluteString
             }
             .compactMap { url in
-                URL(string: "http://localhost:80/\(url.lastPathComponent)")
+                URL(string: url.lastPathComponent)
             }
         return urls
     }
     
     private func watch(url: URL) async throws {
-        async let _ = server.stop(timeout: 10)
         self.monitor?.stop()
         self.monitor = try FileMonitor(directory: url)
         try self.monitor?.start()
         self.currentEventText = "Watching \(url.lastPathComponent)"
         guard let monitor else {
-            print("Could not watch \(url.lastPathComponent)")
             return
         }
         if let urls = try? getFolderContents(url: url) {
             filesURLs = urls
         }
         try await serve(url: url)
-        print("start watching \(url.lastPathComponent)")
         for await event in monitor.stream {
             switch event {
             case .added(file: let newURL):
                 currentEventText = "New: \(newURL.lastPathComponent)"
-                if let webURL = URL(string: "http://localhost:80/\(newURL.lastPathComponent)") {
+                if let webURL = URL(string: newURL.lastPathComponent) {
                     filesURLs.append(webURL)
                 }
             case .changed(file: let modifiedURL):
@@ -115,7 +104,6 @@ struct ContentView: View {
                 }
             }
         }
-        print("done watching \(url.lastPathComponent)")
     }
     
     var body: some View {
@@ -174,6 +162,7 @@ struct ContentView: View {
                 }
                 .fileImporter(isPresented: $showFilePicker, 
                               allowedContentTypes: [.folder]) { result in
+                    filesURLs = []
                     switch result {
                     case .success(let url):
                         self.watchedFolderURL = url
@@ -181,7 +170,6 @@ struct ContentView: View {
                             do {
                                 try await watch(url: url)
                             } catch {
-                                print("mon fail\n\(error.localizedDescription)")
                                 currentEventText = error.localizedDescription
                             }
                         }
