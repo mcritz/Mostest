@@ -1,39 +1,12 @@
 {
-  "originHash" : "e247cb41e78740120bfe3dd6024ff3639cf8cbe601c77346690aca43ca692321",
+  "originHash" : "fcc5a9e047bc89c422e9ca5571e5b664446abc3c4c0b838c23d066c241e1a3f6",
   "pins" : [
-    {
-      "identity" : "filemonitor",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mcritz/FileMonitor/",
-      "state" : {
-        "branch" : "main",
-        "revision" : "3210af09718cf7e2494cd21d15cea0b7505e0a5e"
-      }
-    },
     {
       "identity" : "flyingfox",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swhitty/FlyingFox",
       "state" : {
         "revision" : "c9e0d358e6fcab4b4a4589bc88d110875c96d739",
-        "version" : "0.14.0"
-      }
-    },
-    {
-      "identity" : "fulldiskaccess",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/inket/FullDiskAccess.git",
-      "state" : {
-        "revision" : "846e04ea2b84fce843f47d7e7f3421189221829c",
-        "version" : "1.0.0"
-      }
-    },
-    {
-      "identity" : "plot",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/JohnSundell/Plot.git",
-      "state" : {
-        "revision" : "271926b4413fe868739d99f5eadcf2bd6cd62fb8",
         "version" : "0.14.0"
       }
     }

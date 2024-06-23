@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FD98BC82C10FEA100BFE474 /* Plot in Frameworks */ = {isa = PBXBuildFile; productRef = 0FD98BC72C10FEA100BFE474 /* Plot */; };
+		0F0F98D42C28D95E00E64F16 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0F0F98D32C28D95B00E64F16 /* README.md */; };
+		0FD7E15B2C19037800D21FC3 /* FolderIndexHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD7E15A2C19037800D21FC3 /* FolderIndexHandler.swift */; };
 		125F2C4A2C063FA9007F9716 /* MostestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F2C492C063FA9007F9716 /* MostestApp.swift */; };
 		125F2C4C2C063FA9007F9716 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F2C4B2C063FA9007F9716 /* ContentView.swift */; };
 		125F2C4E2C063FAC007F9716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 125F2C4D2C063FAC007F9716 /* Assets.xcassets */; };
 		125F2C512C063FAC007F9716 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 125F2C502C063FAC007F9716 /* Preview Assets.xcassets */; };
-		125F2C7E2C069F38007F9716 /* FileMonitor in Frameworks */ = {isa = PBXBuildFile; productRef = 125F2C7D2C069F38007F9716 /* FileMonitor */; };
-		125F2C822C07AB11007F9716 /* FullDiskAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 125F2C812C07AB11007F9716 /* FullDiskAccess */; };
 		125F2C852C07BFE1007F9716 /* FlyingFox in Frameworks */ = {isa = PBXBuildFile; productRef = 125F2C842C07BFE1007F9716 /* FlyingFox */; };
 		125F2C872C07BFE1007F9716 /* FlyingSocks in Frameworks */ = {isa = PBXBuildFile; productRef = 125F2C862C07BFE1007F9716 /* FlyingSocks */; };
-		125F2C892C07CFC2007F9716 /* DirectoryHTTPHandler+WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F2C882C07CFC2007F9716 /* DirectoryHTTPHandler+WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0F98D32C28D95B00E64F16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0FD7E15A2C19037800D21FC3 /* FolderIndexHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderIndexHandler.swift; sourceTree = "<group>"; };
 		125F2C462C063FA9007F9716 /* Mostest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mostest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		125F2C492C063FA9007F9716 /* MostestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostestApp.swift; sourceTree = "<group>"; };
 		125F2C4B2C063FA9007F9716 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,7 +27,6 @@
 		125F2C502C063FAC007F9716 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		125F2C522C063FAC007F9716 /* Mostest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mostest.entitlements; sourceTree = "<group>"; };
 		125F2C7F2C07A506007F9716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		125F2C882C07CFC2007F9716 /* DirectoryHTTPHandler+WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DirectoryHTTPHandler+WebView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,10 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FD98BC82C10FEA100BFE474 /* Plot in Frameworks */,
-				125F2C822C07AB11007F9716 /* FullDiskAccess in Frameworks */,
 				125F2C852C07BFE1007F9716 /* FlyingFox in Frameworks */,
-				125F2C7E2C069F38007F9716 /* FileMonitor in Frameworks */,
 				125F2C872C07BFE1007F9716 /* FlyingSocks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,13 +61,14 @@
 		125F2C482C063FA9007F9716 /* Mostest */ = {
 			isa = PBXGroup;
 			children = (
+				0F0F98D32C28D95B00E64F16 /* README.md */,
 				125F2C7F2C07A506007F9716 /* Info.plist */,
 				125F2C492C063FA9007F9716 /* MostestApp.swift */,
 				125F2C4B2C063FA9007F9716 /* ContentView.swift */,
 				125F2C4D2C063FAC007F9716 /* Assets.xcassets */,
 				125F2C522C063FAC007F9716 /* Mostest.entitlements */,
 				125F2C4F2C063FAC007F9716 /* Preview Content */,
-				125F2C882C07CFC2007F9716 /* DirectoryHTTPHandler+WebView.swift */,
+				0FD7E15A2C19037800D21FC3 /* FolderIndexHandler.swift */,
 			);
 			path = Mostest;
 			sourceTree = "<group>";
@@ -101,11 +98,8 @@
 			);
 			name = Mostest;
 			packageProductDependencies = (
-				125F2C7D2C069F38007F9716 /* FileMonitor */,
-				125F2C812C07AB11007F9716 /* FullDiskAccess */,
 				125F2C842C07BFE1007F9716 /* FlyingFox */,
 				125F2C862C07BFE1007F9716 /* FlyingSocks */,
-				0FD98BC72C10FEA100BFE474 /* Plot */,
 			);
 			productName = Mostest;
 			productReference = 125F2C462C063FA9007F9716 /* Mostest.app */;
@@ -136,10 +130,7 @@
 			);
 			mainGroup = 125F2C3D2C063FA9007F9716;
 			packageReferences = (
-				125F2C7C2C069F38007F9716 /* XCRemoteSwiftPackageReference "FileMonitor" */,
-				125F2C802C07AB11007F9716 /* XCRemoteSwiftPackageReference "FullDiskAccess" */,
 				125F2C832C07BFE1007F9716 /* XCRemoteSwiftPackageReference "FlyingFox" */,
-				0FD98BC62C10FEA100BFE474 /* XCRemoteSwiftPackageReference "Plot" */,
 			);
 			productRefGroup = 125F2C472C063FA9007F9716 /* Products */;
 			projectDirPath = "";
@@ -155,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F0F98D42C28D95E00E64F16 /* README.md in Resources */,
 				125F2C512C063FAC007F9716 /* Preview Assets.xcassets in Resources */,
 				125F2C4E2C063FAC007F9716 /* Assets.xcassets in Resources */,
 			);
@@ -168,8 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				125F2C4C2C063FA9007F9716 /* ContentView.swift in Sources */,
-				125F2C892C07CFC2007F9716 /* DirectoryHTTPHandler+WebView.swift in Sources */,
 				125F2C4A2C063FA9007F9716 /* MostestApp.swift in Sources */,
+				0FD7E15B2C19037800D21FC3 /* FolderIndexHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +301,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mostest/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "We need permission to select folders to watch";
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "We need permission to select folders to watch";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "We need permission to select folders to watch";
@@ -340,6 +333,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mostest/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "We need permission to select folders to watch";
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "We need permission to select folders to watch";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "We need permission to select folders to watch";
@@ -380,30 +374,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0FD98BC62C10FEA100BFE474 /* XCRemoteSwiftPackageReference "Plot" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JohnSundell/Plot.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.14.0;
-			};
-		};
-		125F2C7C2C069F38007F9716 /* XCRemoteSwiftPackageReference "FileMonitor" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mcritz/FileMonitor/";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		125F2C802C07AB11007F9716 /* XCRemoteSwiftPackageReference "FullDiskAccess" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/inket/FullDiskAccess.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		125F2C832C07BFE1007F9716 /* XCRemoteSwiftPackageReference "FlyingFox" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/swhitty/FlyingFox";
@@ -415,21 +385,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0FD98BC72C10FEA100BFE474 /* Plot */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0FD98BC62C10FEA100BFE474 /* XCRemoteSwiftPackageReference "Plot" */;
-			productName = Plot;
-		};
-		125F2C7D2C069F38007F9716 /* FileMonitor */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 125F2C7C2C069F38007F9716 /* XCRemoteSwiftPackageReference "FileMonitor" */;
-			productName = FileMonitor;
-		};
-		125F2C812C07AB11007F9716 /* FullDiskAccess */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 125F2C802C07AB11007F9716 /* XCRemoteSwiftPackageReference "FullDiskAccess" */;
-			productName = FullDiskAccess;
-		};
 		125F2C842C07BFE1007F9716 /* FlyingFox */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 125F2C832C07BFE1007F9716 /* XCRemoteSwiftPackageReference "FlyingFox" */;
