@@ -1,3 +1,5 @@
+![Icon of a white swirl on a nearly black-brown background. It smells like a
+sweet childhood treat.](./Mostest/Assets.xcassets/AppIcon.appiconset/256x256.png)
 # Mostest
 
 The Hostess with the Mostest
